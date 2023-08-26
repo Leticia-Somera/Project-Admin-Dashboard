@@ -12,30 +12,9 @@ const GeographyChart = ({ isDashboard = false }) => {
         <ResponsiveChoropleth
         data={data}
         theme={{
-            axis: {
-                domain: {
-                    line: {
-                        stroke: colors.grey[100]
-                    }
-                },
-                legend: {
-                    text: {
-                        fill: colors.grey[100]
-                    }
-                },
-                ticks: {
-                    line: {
-                        stroke: colors.grey[100],
-                        strokeWidth: 1
-                    },
-                    text: {
-                        fill: colors.grey[100]
-                    }
-                }
-            },
-            legend: {
-                text: {
-                    fill: colors.grey[100]
+            tooltip: {
+                container: {
+                    color: colors.primary[500]
                 }
             },
         }}
@@ -70,7 +49,7 @@ const GeographyChart = ({ isDashboard = false }) => {
                         {
                             on: 'hover',
                             style: {
-                                itemTextColor: '#000000',
+                                itemTextColor: colors.grey[100],
                                 itemOpacity: 1
                             }
                         }

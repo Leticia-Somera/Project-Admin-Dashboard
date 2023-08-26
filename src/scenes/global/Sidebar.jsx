@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
+import "react-pro-sidebar/dist/css/styles.css";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
@@ -17,8 +17,6 @@ import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import user from '../../assets/user.png';
-import Dashboard from "../dashboard";
-import { HomeOutlined } from "@mui/icons-material";
 
 const Item = ({ title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
@@ -63,7 +61,7 @@ const Sidebar = () => {
             },
         }}
     >
-        <ProSidebar collapsed={isCollapsed} >
+        <ProSidebar collapsed={isCollapsed}>
             <Menu iconShape='square' >
                 {/* Logo and Menu Icon */}
                 <MenuItem
@@ -92,8 +90,8 @@ const Sidebar = () => {
                             </IconButton>
                         </Box>
                     )}
-
                     </MenuItem>
+
                     {/* User */}
                     {!isCollapsed && (
                         <Box mb='25px'>
@@ -215,12 +213,9 @@ const Sidebar = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
-
                     </Box>
-            </Menu>
-            
-        </ProSidebar>
-        
+            </Menu>          
+        </ProSidebar>     
     </Box>)
 }
 
